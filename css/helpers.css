@@ -1,0 +1,101 @@
+/* helpers */
+.limpia,
+.clearThis {
+	clear: both;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+}
+
+    /* new clearfix */
+    .clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.box {
+	-moz-box-sizing: border-box!important;
+	-webkit-box-sizing: border-box!important;
+	box-sizing: border-box!important;
+}
+/* margins */
+.nm {
+	margin: 0 !important;
+}
+.nmRig {
+	margin-right: 0 !important;
+}
+.nmLef {
+	margin-left: 0 !important;
+}
+.nmTop {
+	margin-top: 0 !important;
+}
+.nmBot {
+	margin-bottom: 0 !important;
+}
+/* borders */
+.nb {
+	border: none !important;
+}
+.nbRig {
+	border-right: none !important;
+}
+.nbLef {
+	border-left: none !important;
+}
+.nbTop {
+	border-top: none !important;
+}
+.nbBot {
+	border-bottom: none !important;
+}
+/* paddings */
+.np {
+	padding: 0 !important;
+}
+.npRig {
+	padding-right: 0 !important;
+}
+.npLef {
+	padding-left: 0 !important;
+}
+.npTop {
+	padding-top: 0 !important;
+}
+.npBot {
+	padding-bottom: 0 !important;
+}
+/* background */
+.nBg {
+	background: none !important;
+}
+/* floats */
+.flRig {
+	float: right !important;
+}
+.flLef {
+	float: left !important;
+}
+.flN {
+	float: none !important;
+}
+/* font style */
+.fsI {
+	font-style: italic;
+}
+.fsU {
+	text-decoration: underline;
+}
+.fsB {
+	font-weight: bold;
+}
+/* do not show */
+.no,
+hr {
+	display: none !important;
+}
+.of {
+	display:block;
+	position:absolute;
+	left:-9999px}
+
+/*#container, #header body, #mainBody, #barLef, #footer {
+border:1px dotted #15FF39;
+}*/
