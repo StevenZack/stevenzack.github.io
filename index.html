@@ -15,7 +15,18 @@
             if (isLinux) return "Linux";
             return "other";
         }
+        function detectLang(){
+            var language_zh_cn = "zh-cn";  
+              
+            var currentLang = navigator.language;  
+            if(!currentLang)  
+                currentLang = navigator.browserLanguage;  
+            if(currentLang.toLowerCase() == language_zh_cn){  
+                document.getElementById("downloadBt").setAttribute("value", "下载") 
+            }  
+        }
         function defaultSelection(){
+            detectLang()
             var osInfo=detectOS()
             var all_options=document.getElementById("selector").options;
             for(i=0;i<all_options.length;i++){
@@ -39,7 +50,7 @@
         <option value="Windows" id="Windows" selected="selected">Windows</option>
         <option value="Mac" id="Mac">Mac</option>
     </select>
-    <input type="button" onclick="download()" value="Download">
+    <input type="button" id="downloadBt" onclick="download()" value="Download">
     </center>
 </body>
 </html>
