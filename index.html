@@ -37,7 +37,11 @@
             var obj=document.getElementById("selector")
             var index = obj.selectedIndex
             var str=obj.options[index].id
-            window.location.href="https://stevenzack.github.io/"+str+"/hosts"
+            if (navigator.language=="zh-CN") {
+                window.location.href="https://stevenzack.coding.me/"+str+"/hosts"
+            }else{
+                window.location.href="https://stevenzack.github.io/"+str+"/hosts"
+            }
         }
     </script>
 </head>
