@@ -16,12 +16,10 @@
             return "other";
         }
         function detectLang(){
-            var language_zh_cn = "zh-cn";  
+            var language_zh_cn = "zh-CN";  
               
             var currentLang = navigator.language;  
-            if(!currentLang)  
-                currentLang = navigator.browserLanguage;  
-            if(currentLang.toLowerCase() == language_zh_cn){  
+            if(currentLang == language_zh_cn){  
                 document.getElementById("downloadBt").setAttribute("value", "下载") 
             }  
         }
