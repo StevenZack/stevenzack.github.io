@@ -1,58 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <title>Steven Zack's Github Page</title>
-    <script type="text/javascript">
-        function detectOS() {
-            var sUserAgent = navigator.userAgent;
-            var isWin = (navigator.platform == "Win32") || (navigator.platform == "Windows");
-            if (isWin) return "Windows"
-            var isMac = (navigator.platform == "Mac68K") || (navigator.platform == "MacPPC") || (navigator.platform == "Macintosh") || (navigator.platform == "MacIntel");
-            if (isMac) return "Mac";
-            var isLinux = (String(navigator.platform).indexOf("Linux") > -1)||(String(navigator.platform).indexOf("Android") > -1)||((navigator.platform == "X11") && !isWin && !isMac);
-            if (isLinux) return "Linux";
-            return "other";
-        }
-        function detectLang(){
-            var language_zh_cn = "zh-CN";  
-              
-            var currentLang = navigator.language;  
-            if(currentLang == language_zh_cn){  
-                document.getElementById("downloadBt").setAttribute("value", "下载") 
-            }  
-        }
-        function defaultSelection(){
-            detectLang()
-            var osInfo=detectOS()
-            var all_options=document.getElementById("selector").options;
-            for(i=0;i<all_options.length;i++){
-                if (all_options[i].id==osInfo) {
-                    all_options[i].selected=true
-                }
-            }
-        }
-        function download(){
-            var obj=document.getElementById("selector")
-            var index = obj.selectedIndex
-            var str=obj.options[index].id
-            if (navigator.language=="zh-CN") {
-                window.location.href="https://stevenzack.coding.me/"+str+"/hosts"
-            }else{
-                window.location.href="https://stevenzack.github.io/"+str+"/hosts"
-            }
-        }
-    </script>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="theme-color" content="#0088ff">
+	<meta name="viewport" content="width=device-width , initial-scale=1">
+	<link rel="manifest" href="manifest.json">
 </head>
-<body onload="defaultSelection()">
-    <center><h1>Google Hosts</h1></center>
-    <center><select id="selector">
-        <option value="Linux/Android" id="Linux" >Linux/Android</option>
-        <option value="Windows" id="Windows" selected="selected">Windows</option>
-        <option value="Mac" id="Mac">Mac</option>
-    </select>
-    <input type="button" id="downloadBt" onclick="download()" value="Download">
-    </center>
+<body>
+<h1>Hello PWA2</h1>
+<script type="text/javascript">
+	if('serviceWorker' in navigator) {
+	  navigator.serviceWorker
+	           .register('sw.js',{scope:'/'})
+	           .then(function() { console.log("Service Worker Registered"); });
+	}
+</script>
 </body>
 </html>
