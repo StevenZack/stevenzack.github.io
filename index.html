@@ -1,20 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<meta charset="utf-8">
-	<meta name="theme-color" content="#0088ff">
-	<meta name="viewport" content="width=device-width , initial-scale=1">
-	<link rel="manifest" href="manifest.json">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>Steven Zack's Github Page</title>
+    <script type="text/javascript">
+        function detectOS() {
+            var sUserAgent = navigator.userAgent;
+            var isWin = (navigator.platform == "Win32") || (navigator.platform == "Windows");
+            if (isWin) return "Windows"
+            var isMac = (navigator.platform == "Mac68K") || (navigator.platform == "MacPPC") || (navigator.platform == "Macintosh") || (navigator.platform == "MacIntel");
+            if (isMac) return "Mac";
+            var isLinux = (String(navigator.platform).indexOf("Linux") > -1)||(String(navigator.platform).indexOf("Android") > -1)||((navigator.platform == "X11") && !isWin && !isMac);
+            if (isLinux) return "Linux";
+            return "other";
+        }
+        function detectLang(){
+            var language_zh_cn = "zh-CN";
+
+            var currentLang = navigator.language;
+            if(currentLang == language_zh_cn){
+                document.getElementById("downloadBt").setAttribute("value", "下载")
+                document.getElementById("langenius").innerHTML="局域网精灵"
+            }
+        }
+        function defaultSelection(){
+            detectLang()
+            var osInfo=detectOS()
+            var all_options=document.getElementById("selector").options;
+            for(i=0;i<all_options.length;i++){
+                if (all_options[i].id==osInfo) {
+                    all_options[i].selected=true
+                }
+            }
+        }
+        function download(){
+            var obj=document.getElementById("selector")
+            var index = obj.selectedIndex
+            var str=obj.options[index].id
+            window.location.href="https://stevenzack.coding.me/"+str+"/hosts"
+        }
+    </script>
+    <style type="text/css">
+    	.appsContainer{
+    		box-shadow: 1px 1px 20px #009688;
+    		border-radius: 12px;
+    		width: 50px;
+    		height: 50px;
+    		cursor: pointer;
+    	}
+    	.greenThings{
+    		color: #009688;
+    	}
+    </style>
 </head>
-<body>
-<h1>Hello PWA2</h1>
-<script type="text/javascript">
-	if('serviceWorker' in navigator) {
-	  navigator.serviceWorker
-	           .register('sw.js',{scope:'/'})
-	           .then(function() { console.log("Service Worker Registered"); });
-	}
-</script>
+<body onload="defaultSelection()">
+    <center><h1 style="color: #E91E63">Google Hosts</h1></center>
+    <center><select id="selector">
+        <option value="Linux/Android" id="Linux" >Linux/Android</option>
+        <option value="Windows" id="Windows" selected="selected">Windows</option>
+        <option value="Mac" id="Mac">Mac</option>
+    </select>
+    <input type="button" id="downloadBt" onclick="download()" value="Download"><br><br><br><br>
+    <p><h1 class="greenThings"><b>Apps</b></h1></p>
+    <table>
+    	<tr><td align="center">
+    		<div align="center" class="appsContainer"  onmouseover="this.setAttribute('style', 'box-shadow:2px 2px 20px');" onmouseout="this.setAttribute('style','box-shadow:1px 1px 20px #009688')">
+    		<a href="http://www.coolapk.com/apk/com.xchat.stevenzack.langenius">
+    		<img src="apps/LanGenius/LanGenius.svg" alt=".svg" width="40" height="40" style="margin-top: 5px;" ></a></div><br>
+    		<b class="greenThings" id="langenius">LanGenius</b>
+    	</td></tr>
+    </table>
+    </center>
 </body>
 </html>
