@@ -1,21 +1,10 @@
-# Copyright (c) 2014-2017, racaljk.
-# https://github.com/racaljk/hosts
-# Last updated: 2017-06-11
+127.0.0.1	localhost
+127.0.1.1	steven-pc
+::1	localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
 
-# https://laod.cn/hosts/2017-google-hosts.html
-
-# This work is licensed under a CC BY-NC-SA 4.0 International License.
-# https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-# Modified Hosts Start
-
-# Localhost (DO NOT REMOVE) Start
-127.0.0.1	localhost  kali
-::1	localhost
-::1	ip6-localhost
-::1	ip6-loopback
-# Localhost (DO NOT REMOVE) End
-
+202.86.162.172	zigzigcheers.blogspot.com
 # Amazon AWS Start
 220.181.112.244 www.baidu.com
 220.181.112.244 baidu.com
@@ -45,7 +34,6 @@
 
 # Android Start
 202.86.162.172	android.com
-202.86.162.172	zigzigcheers.blogspot.com
 202.86.162.172	www.android.com
 202.86.162.172	a.android.com
 202.86.162.172	connectivitycheck.android.com
@@ -1024,6 +1012,7 @@
 202.86.162.172	go-review.googlesource.com
 202.86.162.172	cdn.googlesource.com
 202.86.162.172	golang.org
+216.239.38.21   godoc.org
 202.86.162.172	www.golang.org
 202.86.162.172	blog.golang.org
 202.86.162.172	play.golang.org
