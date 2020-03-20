@@ -8,4 +8,5 @@
 
 - [个人简介](intro/intro.md)
 - [随想](thoughts/thoughts.md)
+- [局域网精灵](langenius/langenius.md)
 - [Expression-X](expressionx/expressionx.md)
