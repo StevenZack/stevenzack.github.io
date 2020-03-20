@@ -1,4 +1,11 @@
 # 个人博客
 
-- expressionx
-    - [人生八大追求](expressionx/eight-persuits.md)
+![avatar](res/image/avatar.jpg)
+
+## StevenZack 
+
+为了自由！
+
+- [个人简介](intro/intro.md)
+- [随想](thoughts/thoughts.md)
+- [Expression-X](expressionx/expressionx.md)
